@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>3 Column Card Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            max-width: 30%;
+            transition: transform 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .card p {
+            color: #666;
+        }
+        
+        @media (max-width: 900px) {
+            .card {
+                max-width: 45%;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h3>Card One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <h3>Card Two</h3>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="card">
+            <h3>Card Three</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive 3-Column Card Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 40px);
+            /* 3 cards in a row */
+            max-width: calc(33.333% - 40px);
+            transition: transform 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        h3 {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Responsive 3-Column Card Layout</h1>
+    <br/>
+    <br/>
+
+    <div class="container">
+        <div class="card">
+            <h3>HTML</h3>
+            <a href="https://www.w3schools.com/html/">HTML is the standard markup language for Web pages. With HTML you can create your own Website.</a>
+        </div>
+        <div class="card">
+            <h3>Tables</h3>
+            <a href="https://www.w3schools.com/html/html_tables.asp">HTML tables allow web developers to arrange data into rows and columns.</a>
+        </div>
+        <div class="card">
+            <h3>Lists</h3>
+            <a href="https://www.w3schools.com/html/html_lists.asp">HTML lists allow web developers to group a set of related items in lists.</a>
+        </div>
+        <div class="card">
+            <h3>Forms</h3>
+            <a href="https://www.w3schools.com/html/html_forms.asp">An HTML form is used to collect user input. The user input is most often sent to a server for processing.</a>
+        </div>
+        <div class="card">
+            <h3>Semantics</h3>
+            <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">A semantic element clearly describes its meaning to both the browser and the developer.</a>
+        </div>
+        <div class="card">
+            <h3>Media Tags</h3>
+            <a href="https://www.w3schools.com/TAGS/att_media.asp">The media attribute specifies what media/device the linked document is optimized for.</a>
+        </div>
+        <div class="card">
+            <h3>CSS</h3>
+            <a href="https://www.w3schools.com/Css/">CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.</a>
+        </div>
+        <div class="card">
+            <h3>Box Model</h3>
+            <a href="https://www.w3schools.com/Css/css_boxmodel.asp">In CSS, the term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element</a>
+        </div>
+        <div class="card">
+            <h3>Flexbox</h3>
+            <a href="https://www.w3schools.com/csS/css3_flexbox.asp">Flexbox is short for the Flexible Box Layout module. Flexbox is a layout method for arranging items in rows or columns.</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

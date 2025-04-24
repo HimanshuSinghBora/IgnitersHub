@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Styles and Text with JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        p {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Modify Styles and Text</h1>
+        <p id="textElement">This is a sample text.</p>
+        <button onclick="changeTextColor()">Change Text Color</button>
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+        <button onclick="increaseFontSize()">Increase Font Size</button>
+        <button onclick="changeTextContent()">Change Text Content</button>
+        <button onclick="changeFontStyle()">Change Font Style</button>
+        <button onclick="changeFontFamily()">Change Font Family</button>
+    </div>
+
+    <script>
+        function changeTextColor() {
+            const textElement = document.getElementById('textElement');
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            textElement.style.color = randomColor;
+        }
+
+        function changeBackgroundColor() {
+            const textElement = document.getElementById('textElement');
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            textElement.style.backgroundColor = randomColor;
+        }
+
+        function increaseFontSize() {
+            const textElement = document.getElementById('textElement');
+            let currentSize = window.getComputedStyle(textElement, null).getPropertyValue('font-size');
+            currentSize = parseFloat(currentSize);
+            textElement.style.fontSize = (currentSize + 2) + 'px';
+        }
+
+        function changeTextContent() {
+            const textElement = document.getElementById('textElement');
+            textElement.textContent = 'The text has been changed!';
+        }
+
+        function changeFontStyle() {
+            const textElement = document.getElementById('textElement');
+            if (textElement.style.fontStyle === 'italic') {
+                textElement.style.fontStyle = 'normal'; // Change to normal
+            } else {
+                textElement.style.fontStyle = 'italic'; // Change to italic
+            }
+        }
+
+        function changeFontFamily() {
+            const textElement = document.getElementById('textElement');
+            const fontFamilies = ['Arial', 'Courier New', 'Georgia', 'Times New Roman', 'Verdana'];
+            const randomFont = fontFamilies[Math.floor(Math.random() * fontFamilies.length)];
+            textElement.style.fontFamily = randomFont;
+        }
+    </script>
+
+</body>
+
+</html>

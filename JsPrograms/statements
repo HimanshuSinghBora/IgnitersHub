@@ -1,0 +1,55 @@
+//IF-ELSE STATEMENTS
+const num = 0;
+if (num > 0) {
+    console.log("Given number is positive.");
+} else if (num < 0) {
+    console.log("Given number is negative.");
+} else {
+    console.log("Given number is zero.");
+}
+
+function switchCondition() {
+    let grade = 'B';
+    let result;
+    //SWITCH STATEMENTS
+    switch (grade) {
+        case 'A':
+            result = "A (Excellent)";
+            break;
+        case 'B':
+            result = "B (Average)";
+            break;
+        case 'C':
+            result = "C (Below than average)";
+            break;
+        default:
+            result = "No Grade";
+    }
+    console.log(result);
+}
+//BREAK STATEMENTS
+const fruit = "Apple";
+
+switch (fruit) {
+    case "Apple":
+        console.log("Apple is healthy.");
+    case "Mango":
+        console.log("Mango is delicious.");
+        break;
+    default:
+        console.log("No fruit chosen.");
+}
+//CONTINUE STATEMENT
+let c = 0;
+while (c < 11) {
+    c++;
+    if (c % 2 == 0) continue;
+    console.log(c);
+}
+//BREAK STATEMENT
+let i = 0;
+while (i < 11) {
+    i++;
+    if (i % 2 == 0) continue;
+    console.log(i);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Product Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-content {
+            padding: 15px;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .product-description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
+            font-size: 1.1rem;
+            color: #007BFF;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .product-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .product-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-card">
+        <img src="igniters.jpeg" alt="Product Image" class="product-image" style="width: 550px;">
+        <div class="product-content">
+            <h2 class="product-title">Igniters Course</h2>
+            <p class="product-description">Transform your development journey with the awesome learning.</p>
+            <div class="product-price">$59.99</div>
+            <a href="#" class="product-button">Add to Cart</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #result {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>DOM Manipulation Demo</h1>
+        <button onclick="querySelectorExample()">querySelector</button>
+        <button onclick="getElementByIdExample()">getElementById</button>
+        <button onclick="addClass()">Add Class</button>
+        <button onclick="removeClass()">Remove Class</button>
+        <button onclick="toggleClass()">Toggle Class</button>
+        <button onclick="checkClass()">Check Class</button>
+
+        <h2>Result</h2>
+        <div id="result"></div>
+
+        <div id="myDiv" class="example">This is a sample div.</div>
+    </div>
+
+    <script>
+        function displayResult(message) {
+            document.getElementById('result').innerText = message;
+        }
+
+        function querySelectorExample() {
+            const element = document.querySelector('.example');
+            displayResult(`querySelector: Found element with class "example": ${element ? element.textContent : 'Not found'}`);
+        }
+
+        function getElementByIdExample() {
+            const element = document.getElementById('myDiv');
+            displayResult(`getElementById: Found element with ID "myDiv": ${element ? element.textContent : 'Not found'}`);
+        }
+
+        function addClass() {
+            const element = document.getElementById('myDiv');
+            element.classList.add('new-class');
+            displayResult('Added class "new-class" to the div.');
+        }
+
+        function removeClass() {
+            const element = document.getElementById('myDiv');
+            element.classList.remove('example');
+            displayResult('Removed class "example" from the div.');
+        }
+
+        function toggleClass() {
+            const element = document.getElementById('myDiv');
+            element.classList.toggle('toggled-class');
+            displayResult('Toggled class "toggled-class" on the div.');
+        }
+
+        function checkClass() {
+            const element = document.getElementById('myDiv');
+            const hasClass = element.classList.contains('new-class');
+            displayResult(`Check Class: "new-class" is ${hasClass ? 'present' : 'not present'} on the div.`);
+        }
+    </script>
+
+</body>
+
+</html>

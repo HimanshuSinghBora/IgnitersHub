@@ -1,0 +1,67 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Api Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    table,
+    tr,
+    th,
+    td {
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <h1>Api Example</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="userData">
+            <!-- Student records will be displayed here -->
+        </tbody>
+    </table>
+</body>
+<script>
+    fetch('https://dummyjson.com/users')
+        .then((res) => {
+            console.log(res.status)
+            console.log(res.ok)
+            console.log(res)
+            return res.json()
+        }).then(data => {
+            console.log(data)
+            let tableData = '';
+            data.users.forEach(item => {
+                console.log(item)
+                tableData += `
+                    <tr>
+                        <td>${item.id}</td>
+                        <td>${item.firstName} ${item.lastName}</td>
+                        <td>${item.age}</td>
+                         <td>${item.gender}</td>
+                        <td>${item.email}</td>
+                        <td>${item.phone}</td>
+                    </tr>
+                `;
+            });
+            document.getElementById('userData').innerHTML = tableData;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+
+</html>

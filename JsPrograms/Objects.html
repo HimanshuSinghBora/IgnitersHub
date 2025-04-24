@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .method {
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        #result {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Objects Methods</h1>
+
+    <div class="method">
+        <button onclick="createObject()">Object.create()</button>
+        <button onclick="assign()">Object.assign()</button>
+        <button onclick="keys()">Object.keys()</button>
+        <button onclick="values()">Object.values()</button>
+        <button onclick="entries()">Object.entries()</button>
+        <button onclick="is()">Object.is()</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        var obj;
+
+        function displayResult(result) {
+            document.getElementById('result').innerText = result;
+        }
+
+        function createObject() {
+            obj = Object.create(obj);
+            displayResult(`Object.create(): ${JSON.stringify(newObj)}`);
+        }
+
+        function assign() {
+            const target = {
+                a: 1
+            };
+            const source = {
+                b: 2,
+                c: 3
+            };
+            const assignedObj = Object.assign(target, source);
+            obj = assignedObj;
+            displayResult(`Object.assign(): ${JSON.stringify(assignedObj)}`);
+        }
+
+        function keys() {
+            const keysArray = Object.keys(obj);
+            displayResult(`Object.keys(): ${JSON.stringify(keysArray)}`);
+        }
+
+        function values() {
+            const valuesArray = Object.values(obj);
+            displayResult(`Object.values(): ${JSON.stringify(valuesArray)}`);
+        }
+
+        function entries() {
+            const entriesArray = Object.entries(obj);
+            displayResult(`Object.entries(): ${JSON.stringify(entriesArray)}`);
+        }
+
+
+        function is() {
+            const isSame = Object.is(obj, obj);
+            displayResult(`Object.is(): ${isSame}`);
+        }
+    </script>
+
+</body>
+
+</html>

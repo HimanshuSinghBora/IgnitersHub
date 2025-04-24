@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .method {
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        #result {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Array Methods</h1>
+
+    <div class="method">
+        <button onclick="arrayOf()">Array.of()</button>
+        <button onclick="arrayFrom()">Array.from()</button>
+        <button onclick="push()">push()</button>
+        <button onclick="pop()">pop()</button>
+        <button onclick="shift()">shift()</button>
+        <button onclick="splice()">splice()</button>
+        <button onclick="sort()">sort()</button>
+        <button onclick="reverse()">reverse()</button>
+        <button onclick="indexOf()">indexOf()</button>
+    </div>
+
+    <div id="value">NULL</div>
+
+    <script>
+        let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        function displayResult(result) {
+            document.getElementById('result').innerText = result;
+        }
+
+        function arrayOf() {
+            const newArr = arr;
+            displayResult(`Array.of(): ${JSON.stringify(newArr)}`);
+        }
+
+        function arrayFrom() {
+            const str = prompt("Enter the string:", "");
+            const newArr = Array.from(str);
+            displayResult(`Array.from(): ${JSON.stringify(newArr)}`);
+        }
+
+        function push() {
+            const str = prompt("Enter the element:", "");
+            arr.push(parseInt(str));
+            displayResult(`push(): ${JSON.stringify(arr)}`);
+        }
+
+        function pop() {
+            const popped = arr.pop();
+            displayResult(`pop(): ${popped}, arr is now: ${JSON.stringify(arr)}`);
+        }
+
+        function shift() {
+            const shifted = arr.shift();
+            displayResult(`shift(): ${shifted}, arr is now: ${JSON.stringify(arr)}`);
+        }
+
+        function splice() {
+            arr.splice(1, 1, 4);
+            displayResult(`splice(): ${JSON.stringify(arr)}`);
+        }
+
+        function sort() {
+            const sortedArr = [...arr].sort();
+            displayResult(`sort(): ${JSON.stringify(sortedArr)}`);
+        }
+
+        function reverse() {
+            const reversedArr = [...arr].reverse();
+            displayResult(`reverse(): ${JSON.stringify(reversedArr)}`);
+        }
+
+        function indexOf() {
+            const str = prompt("Enter the element:", parseInt(""));
+            const index = arr.indexOf(parseInt(str));
+            displayResult(`indexOf(${str}): ${index}`);
+        }
+    </script>
+</body>

@@ -1,0 +1,49 @@
+.grid-layout {
+    display: grid;
+    grid-template: 150px 150px / 1fr 1fr;
+    /* 2 rows / 2 columns */
+    gap: 20px;
+    position: relative;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #4e91fc;
+    color: white;
+    padding: 20px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Z-INDEX in action */
+
+.card1 {
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+}
+
+.card2 {
+    grid-row: 1 / span 2;
+    /* spans 2 rows */
+    grid-column: 2;
+    background-color: #fc636b;
+    z-index: 3;
+    /* on top */
+    position: absolute;
+    top: 60px;
+    left: 120px;
+}
+
+.card3 {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: #58d68d;
+    z-index: 2;
+}

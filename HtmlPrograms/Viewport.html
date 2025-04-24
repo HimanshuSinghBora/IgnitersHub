@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page using Viewport</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        .container {
+            width: 90vw;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            padding: 2vw 0;
+        }
+        
+        .box {
+            flex: 1 1 30vw;
+            background-color: #f2f2f2;
+            padding: 2vw;
+            box-sizing: border-box;
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        header {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            padding: 2vh 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Viewport Example</h1>
+    </header>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+    </div>
+
+</body>
+
+</html>

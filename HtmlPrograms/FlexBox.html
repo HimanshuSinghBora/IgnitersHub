@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Flexbox Example</title>
+    <style>
+        .container1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 10vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: left;
+            height: 100vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .itemNames {
+            background-color: lawngreen;
+            color: white;
+            padding: 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            flex: 1;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .itemTech {
+            background-color: #4CAF50;
+            color: white;
+            padding: 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            flex: 1;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container1">
+        <div class="itemNames">Himanshu</div>
+        <div class="itemNames">Pradeep</div>
+        <div class="itemNames">Khitiz</div>
+    </div>
+    <div class="container2">
+        <div class="itemTech">MOBILE</div>
+        <div class="itemTech">WEB</div>
+        <div class="itemTech">AI/ML</div>
+    </div>
+
+</body>
+
+</html>

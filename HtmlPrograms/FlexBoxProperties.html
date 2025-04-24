@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Flexbox Properties Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            background-color: #eee;
+            padding: 20px;
+        }
+        
+        .item {
+            background-color: #2196F3;
+            color: white;
+            padding: 30px;
+            font-size: 18px;
+            text-align: center;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        
+        .item1 {
+            flex-grow: 1;
+        }
+        
+        .item2 {
+            flex-grow: 2;
+            flex-shrink: 1;
+        }
+        
+        .item3 {
+            order: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item item1">Item 1 (grow: 1)</div>
+        <div class="item item2">Item 2 (grow: 2, shrink: 1)</div>
+        <div class="item item3">Item 3 (order: -1)</div>
+    </div>
+
+</body>
+
+</html>
