@@ -1,3 +1,4 @@
 {
-    "razor.languageServer.forceRuntimeCodeGeneration": false
+    "razor.languageServer.forceRuntimeCodeGeneration": false,
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
